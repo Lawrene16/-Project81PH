@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Trip</ion-title>
+
+    <ion-buttons (click)="close()" style="margin-left: 10px" slot="start">
+      <ion-icon style="font-size: 24px;" name="close"></ion-icon>
+    </ion-buttons>
+    
+    <ion-buttons (click)="uploadEdit()" style="margin-right: 10px" slot="end">
+      <div style="font-size: 16px; font-weight: 300; ">Save</div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <!-- Each option -->
+        <div style="margin-top: 25px; border-radius: 5px; font-family: montserat;">
+          <ion-label style="margin-left: 20px; color: rgb(81, 81, 85); opacity: 0.7;">Select Province</ion-label>
+          <ion-textarea (ionInput)="getItems($event)" placeholder="Search province here" [(ngModel)]="provinceSearchTerm"
+            style="border-radius: 5px; border: 1px solid rgb(216,216,216); background-color: #ffffff; margin-left: 15px; padding-left: 10px; height: 48px; width: 93vw; margin-top: 15px; margin-right: 15px;">
+          </ion-textarea>
+        </div>
+
+    <ion-list *ngIf="isItemAvailable" style="height: auto; overflow-y: auto; width: 96vw">
+      <ion-item (click)="onStateChange(state)" *ngFor="let state of states">{{ state }}</ion-item>
+    </ion-list>
+
+
+    <div style="margin-top: 25px; border-radius: 5px; font-family: montserat;">
+      <ion-label style="margin-left: 20px; color: rgb(81, 81, 85); opacity: 0.7;">Select City/Manucipality</ion-label>
+      <ion-textarea (ionInput)="getItems2($event)" placeholder="Search city/manucipality here" [(ngModel)]="citySearchTerm"
+        style="border-radius: 5px; border: 1px solid rgb(216,216,216); background-color: #ffffff; margin-left: 15px; padding-left: 10px; height: 48px; width: 93vw; margin-top: 15px; margin-right: 15px;">
+      </ion-textarea>
+    </div>
+
+<ion-list *ngIf="isItemAvailable2" style="height: auto; overflow-y: auto; width: 96vw">
+  <ion-item (click)="onCityChange(city)" *ngFor="let city of cities">{{ city }}</ion-item>
+</ion-list>
+
+
+    <div style="margin-top: 25px;">
+      <ion-label style="margin-left: 20px; color: rgb(81, 81, 85); opacity: 0.7; font-family: montserat;">Select Date(trip start)</ion-label>
+      <div
+      style="border-radius: 5px; border: 1px solid rgb(216,216,216); background-color: #ffffff; margin-left: 15px; height: 45px; margin-top: 10px; margin-right: 15px;">
+        
+      <ion-input style="margin-left: 15px;" readonly [(ngModel)]="fromDate" (ionChange)="onChangeFromDate()" [liIonic4Datepicker]="datePickerObj"></ion-input>
+
+      </div>
+    </div>
+
+    <div (click)="checkEndDate()" style="margin-top: 25px;">
+      <ion-label style="margin-left: 20px; color: rgb(81, 81, 85); opacity: 0.7; font-family: montserat;">Select Date(trip end)</ion-label>
+      <div
+      style="border-radius: 5px; border: 1px solid rgb(216,216,216); background-color: #ffffff; margin-left: 15px; height: 45px; margin-top: 10px; margin-right: 15px;">
+        
+      <ion-input *ngIf="fromDate != '' " style="margin-left: 15px;"  readonly [(ngModel)]="toDate" (ionChange)="onChangeToDate()" [liIonic4Datepicker]="datePickerObj"></ion-input>
+      
+      </div>
+    </div>
+
+
+    <div style="margin-top: 25px; border-radius: 5px; font-family: montserat;">
+      <ion-label style="margin-left: 20px; color: rgb(81, 81, 85); opacity: 0.7;">Event Title</ion-label>
+      <ion-textarea [(ngModel)]="eventTitle"
+        style="border-radius: 5px; border: 1px solid rgb(216,216,216); background-color: #ffffff; margin-left: 15px; padding-left: 10px; height: 50px; width: 93vw; margin-top: 10px; margin-right: 15px;">
+      </ion-textarea>
+    </div>
+
+    <div style="margin-top: 25px;">
+      <ion-label style="margin-left: 20px; color: rgb(81, 81, 85); opacity: 0.7; font-family: montserat;">Tell us more
+        about this trip</ion-label>
+      <ion-textarea [(ngModel)]="aboutTrip"
+        style=" border-radius: 5px; border: 1px solid rgb(216,216,216); background-color: #ffffff; margin-left: 15px; padding-left: 10px; height: 150px; width: 93vw; margin-top: 10px; margin-right: 15px;">
+      </ion-textarea>
+    </div>
+
+
+    <div style="margin-top: 25px;" (click)="AccessGallery()">
+      <ion-label style="margin-left: 20px; color: rgb(81, 81, 85); opacity: 0.7; font-family: montserat;">Upload your
+        photo</ion-label>
+
+        <div [hidden]="hideplaceholder" style="border-radius: 5px; border: 1px solid rgb(216,216,216); background-color: #ffffff; margin-left: 15px; height: 300px; width: 93vw; margin-top: 10px; margin-right: 15px;">
+          <p style="margin-top: 50px;" align="center">
+            <img height="80" src="../../assets/icon/camera.png"><br>
+            <span style="margin-top: 20px;	height: 24px;	width: 158px;	color: #6299C9;	font-family: montserat;	font-size: 22px;	font-weight: 600;	letter-spacing: -0.63px;	line-height: 24px;">Add your photo!</span><br><br>
+            <span style="margin-top: 10px;	height: 16px;	width: 231px;	color: #6B6B76;	font-family: montserat;	font-size: 14px;	font-weight: 300;	line-height: 16px;">This photo will be the cover for this trip.</span><br><br>
+            <span style="border-radius: 30px; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; border: 1px solid #FF7C0B; color: #FF7C0B;">Browse photo</span>
+          </p>
+        </div>
+
+      <img [hidden]="!hideplaceholder" [src]="base64TripPhoto"
+        style="border-radius: 5px; border: 1px solid rgb(216,216,216); background-color: rgb(232,239,241); margin-left: 15px; height: 300px; object-fit:cover; width: 93vw; margin-top: 10px; margin-right: 15px;">
+    </div>
+
+  </ion-list>
+
+</ion-content>

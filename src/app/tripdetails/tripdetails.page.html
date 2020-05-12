@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons style="margin-left: 5px" slot="start">
+      <ion-back-button color="primary" defaultHref="/profile"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      View Trip
+      <!-- <ion-icon name="create"></ion-icon> -->
+    </ion-title>
+
+    <ion-buttons style="margin-left: 5px" slot="end">
+      <ion-button (click)="presentActionSheet()" color="primary">
+        <ion-icon color="primary" name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="height: 300px; width: 100vw;">
+    <img (click)="openModal()" height="100%" width="100%" style="object-fit: cover;" src="{{data.photo}}">
+  </div>
+
+  <div style="margin-top: 20px; margin-left: 20px; font-weight: 500; font-size: 20px;">{{data.eventTitle}}</div>
+
+  <div style="width: 100%; margin-left: 20px; margin-top: 10px;">
+    <div style="width: 25px; float: left;">
+      <img height="25px" style="width: 30px;" src="../../assets/icon/pin.png">
+    </div>
+    <div style="float: left; padding-left: 5px; font-size: 15px; margin-top: 2px;">
+      {{data.city}}, {{data.province}}
+    </div>
+  </div><br>
+  <div style="width: 100%; margin-left: 20px; margin-top: 15px;">
+    <div style="width: 25px; float: left;">
+      <img height="18px" style="width: 20px;" src="../../assets/icon/appointment-2.png">
+    </div>
+    <div style="float: left; padding-left: 5px; font-size: 14px; margin-top: 2px;">
+      {{data.fromDate2}} - {{data.toDate2}}
+    </div>
+  </div>
+  <br>
+
+  <div style="margin-left: 20px; font-size: 14px; margin-top: 25px;">{{data.aboutTrip}}</div>
+
+  <br>
+  <!-- <div style="width: 100vw; text-align: center;">
+    <div style="display: inline-block; 
+    margin: 5 auto; height: 40px;	width: 91vw; background-color: #2A5CA7;	border-radius: 24px;" (click)="shareTrip()">
+      <ion-row style="justify-content: center;">
+        <ion-col style="margin-top: 2px; margin-left: 10px;" size="1.5">
+          <img height="25px" src="../../assets/icon/facebook-logo.png">
+        </ion-col>
+        <ion-col col="8" style="margin-top: 5px; color: white; font-size: 18px; font-weight: 500;">
+          Share to Facebook
+        </ion-col>
+      </ion-row>
+    </div>
+  </div> -->
+
+
+  <!-- <div scrollX="true" id="myFixZone">
+    <ion-list *ngFor="let item of b">
+      <div>item</div>
+    </ion-list>
+  </div> -->
+
+
+
+  <!-- <div class="mydiv">
+    <ion-card>hjhg</ion-card>    <ion-card>hjhg</ion-card>    <ion-card>hjhg</ion-card>    <ion-card>hjhg</ion-card>    <ion-card>hjhg</ion-card>    <ion-card>hjhg</ion-card>
+  </div> -->
+  <!-- <ion-scroll direction="x" class="item wide-item">Item 1 Item 1 Item 1 Item 1 Item 1,  Item 1 Item 1 Item 1 Item 1 Item 1,  Item 1 Item 1 Item 1 Item 1 Item 1,  Item 1 Item 1 Item 1 Item 1 Item 1,  Item 1 Item 1 Item 1 Item 1 Item 1,  Item 1 Item 1 Item 1 Item 1 Item 1,  Item 1 Item 1 Item 1 Item 1 Item 1,  Item 1 Item 1 Item 1 Item 1 Item 1,  Item 1 Item 1 Item 1 Item 1 Item 1,   
+  </ion-scroll>
+
+
+ -->
+
+
+  <!-- <ion-item>
+    <ion-label style="margin-left: 16px">
+        {{data.city}}, {{data.province}}
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+      <ion-label style="margin-left: 16px">
+        {{data.fromDate2}} - {{data.toDate2}}
+      </ion-label>
+    </ion-item>
+
+  <ion-item>
+      <ion-label style="margin-left: 16px">
+          {{data.aboutTrip}}
+      </ion-label>
+    </ion-item>
+
+
+
+
+  <br>
+
+  <br> -->
+
+</ion-content>

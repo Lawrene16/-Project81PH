@@ -1,0 +1,27 @@
+<ion-tabs>
+
+  <ion-tab-bar style="background-color: rgb(245, 245, 245);" slot="bottom">
+
+      <ion-tab-button (click)="changeProfileIcon()" tab="profile">
+          <ion-icon [src]="profileIcon"></ion-icon>
+        </ion-tab-button>
+<!-- 
+    <ion-tab-button  (click)="changeDiscoverIcon()" tab="discover">
+      <ion-icon [src]="discoverIcon"></ion-icon>
+    </ion-tab-button> -->
+
+    <ion-tab-button (click)="changeAddtripIcon()" tab="addtrip">
+      <ion-icon [src]="addTripIcon"></ion-icon>
+    </ion-tab-button>
+
+<!--     
+    <ion-tab-button (click)="changeSearchIcon()" tab="search">
+      <ion-icon [src]="searchIcon"></ion-icon>
+      </ion-tab-button> -->
+
+    <ion-tab-button (click)="changeMoreIcon()" tab="more">
+      <ion-icon [src]="moreIcon"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

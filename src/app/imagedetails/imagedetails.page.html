@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+
+    <ion-buttons (click)="closeModal()" style="margin-left: 10px" slot="start">
+        <ion-icon style="font-size: 24px;" name="close"></ion-icon>
+      </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="width: 100vw; height: 100vh;">
+    <img src="{{img}}" style="object-fit: contain; width: 100%;">
+  </div>
+</ion-content>

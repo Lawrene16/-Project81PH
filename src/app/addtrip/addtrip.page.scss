@@ -1,0 +1,45 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+.itemclass{
+  background-color: #ffffff;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.li-ionic4-datePicker {
+
+  .modal-wrapper {
+  
+    height: 75%;
+    
+    width: 310px;
+    
+    border-radius: 0px;
+    
+    @media (min-width: 768px) {
+    
+    width: 350px;
+    
+    height: 65%;
+    
+    }
+  
+  }
+  
+  }

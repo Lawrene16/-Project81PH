@@ -1,0 +1,8 @@
+{
+  "name": "JhazTravelApp",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

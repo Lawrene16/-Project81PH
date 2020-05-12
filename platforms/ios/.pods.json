@@ -1,0 +1,11 @@
+{
+	"pods": {
+		"Flurry-iOS-SDK/FlurrySDK": {
+			"type": "pod",
+			"id": "Flurry-iOS-SDK/FlurrySDK"
+		}
+	},
+	"sources": {},
+	"iosMinVersion": "7.0",
+	"useFrameworks": false
+}

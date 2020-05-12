@@ -1,0 +1,36 @@
+
+  
+.card {
+    border-radius: 2px;
+    display: inline-block;
+    height: 500px;
+    padding: 10px;
+    background-color: white;
+    margin: 1rem;
+    border-radius: 10px;
+    padding-top: 40px;
+    position: relative;
+    font-size: 18px;
+    font-family: montserat;
+    text-align: start;
+    width: 80vw;
+  }
+
+  ion-checkbox{
+    background: #FFFFFF;
+     border-width: 1px !important;
+     border-style: solid !important;
+     border-radius: 5px;
+     border-color : black !important;
+     --height : 30px;
+     --width: 30px;
+     --checkmark-color:#FF7C0B;
+     --background-checked: #FFFFFF;
+     --border-color: #FFFFFF;
+     --border-color-checked :#FFFFFF;
+   } 
+  
+  .card-5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+  

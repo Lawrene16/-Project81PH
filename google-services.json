@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "970318906848",
+    "firebase_url": "https://jahztravelapp.firebaseio.com",
+    "project_id": "jahztravelapp",
+    "storage_bucket": "jahztravelapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970318906848:android:3884e9b8b282da96d79785",
+        "android_client_info": {
+          "package_name": "com.travelapp.mvp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970318906848-pjfrvesooehq4jr3njtohqfqoumcafp6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.travelapp.mvp",
+            "certificate_hash": "47b919983461a075172edbf191144ca1a231ea76"
+          }
+        },
+        {
+          "client_id": "970318906848-2mqlk19hjp4ou1je4dugogbc2vpdn0lf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.travelapp.mvp",
+            "certificate_hash": "e845bea2b82b8c9d1197159ee490d1e753788c55"
+          }
+        },
+        {
+          "client_id": "970318906848-vimnlrre5jl59l27gi4gb148pfen07kv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.travelapp.mvp",
+            "certificate_hash": "7bf7aa594ced6e915d9f0cc79ca86dc239a603e0"
+          }
+        },
+        {
+          "client_id": "970318906848-ct8t889mtf21inrhvmc3j2e8v73676gh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALPtfG9F4QnbLsHDdUbfZmIXmpRcnlTqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970318906848-ct8t889mtf21inrhvmc3j2e8v73676gh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "970318906848-gvka2t8cqbm3ovsd19uea7aqrp4r9ctv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.project81ph.com"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

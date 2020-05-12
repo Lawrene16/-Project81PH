@@ -1,0 +1,210 @@
+<ion-header>
+  <!-- <ion-toolbar style="background-color: rgb(245, 245, 245);"> -->
+  <ion-toolbar [color]="dynamicColor">
+
+    <ion-title style="color: black">
+      Profile
+    </ion-title>
+
+
+    <ion-buttons (click)="editPage()" style="margin-right: 10px" slot="end">
+      <div style="font-size: 15px; font-weight: 300; color:black">Edit</div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div [hidden]="ishidden" (click)="hideIt()" style="width: 100vw; 
+  height: 100vh; background-color: rgba(41, 41, 41, 0.3);
+  position: absolute;
+  top: 0px;
+  z-index: 7;
+  padding-top: 20px;
+  position: absolute;
+  text-align: center">
+
+    <div style="width: 100vw; position: absolute; bottom: 20px;">
+      <div>
+        <span style="font-family: shintaku; font-size: 30px; color: #FF7C0B ">Start adding</span><br>
+        <span style="font-family: shintaku; font-size: 30px; color: #FF7C0B ">Your trip here!</span><br>
+        <div style="width: 100vw; margin-bottom: 10px;"><img style="padding-left: 55px;" height="100px"
+            src="../../assets/icon/arrow.png"></div>
+        <img height="80px">
+      </div>
+    </div>
+  </div>
+
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <div>
+    <div style="height: 150px;">
+      <img (click)="openProfileAndCoverPhoto(0)" style="height: 150px; object-fit: cover; width: 100vw;"
+        [src]="base64CoverPhoto">
+
+      <ion-icon style="position: absolute; top: 110px; font-size: 34px; right: 10px; z-index: 4;" name="camera"
+        (click)="AccessGallery(0)" color="light">
+      </ion-icon>
+    </div>
+
+
+    <!-- Camera close to profile photo -->
+    <div style="position: absolute;
+      top: 90px; width: 100vw;">
+      <div style="position: absolute;
+      height: 40px;
+      top: 90px; width: 100vw;">
+
+        <div (click)="AccessGallery(1)"
+          style="margin-left: 55vw; height: 30px; width: 30px; border-radius: 50%; padding: 1px;">
+          <ion-icon style="font-size: 26px;" name="camera" color="light"></ion-icon>
+        </div>
+
+        <!-- Profile Photo -->
+      </div>
+      <p style="margin: 0px;" align="center"><img (click)="openProfileAndCoverPhoto(1)" class="userimg" height="30"
+          [src]="base64ProfilePhoto"></p>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <p align="center"
+      style="margin: 0px; font-size: 22px; opacity: 0.7; font-family: montserat-bold; font-weight: 600;">
+      <span>{{name}}</span>
+    </p>
+
+
+    <div style="width: 100%; margin-top: 7px; text-align: center; height: 27px;">
+      <div style="display: inline-block; margin: 0 auto;
+        padding: 3px;">
+        <div style="width: 25px; float: left;">
+          <img height="25px" style="width: 16px;" src="../../assets/icon/location-pointer.png">
+        </div>
+        <div style="float: left; padding-left: 5px; font-size: 15px; opacity: 0.6; margin-top: 2px;">
+          {{location}}
+        </div>
+      </div>
+    </div>
+
+
+    <div style="width: 100%; text-align: center; height: 27px;">
+      <div style="display: inline-block; margin: 0 auto;
+        padding: 3px;">
+        <div style="width: 25px; float: left;">
+          <img height="25px" style="width: 18px;" src="../../assets/icon/human-footprint.png">
+        </div>
+        <div style="float: left; padding-left: 5px; opacity: 0.6; font-size: 15px; margin-top: 2px;">
+          {{provincesVisited}}/81 Provinces Visited
+        </div>
+      </div>
+    </div>
+
+
+    <p align="center" style="font-size: 14px; opacity: 0.6; margin: 8px;">{{this.aboutMe}}
+    </p>
+    <br>
+
+    <!-- Default Segment -->
+    <ion-segment style="z-index: 9;" [(ngModel)]="tabvalue" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="showTrips">
+        <ion-label style="font-weight: 700;">TRIP</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="showMaps">
+        <ion-label style="font-weight: 700;">MAP</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="showGallery">
+        <ion-label style="font-weight: 700;">GALLERY</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+
+    <!-- Trips Div -->
+    <div style="background-color: rgb(250, 249, 249);" [hidden]="!showTrips">
+
+
+      <div (click)="openMenu()" style="width: 93vw; margin-top: 12px; margin-left: 15px; height: 40px;">
+        <div style="float: left;">
+          <img height="21" src="../../assets/icon/sort.png">
+          <span style="font-family: montserat;">Sort By</span>
+        </div>
+        <div style="float: right; margin-right: 10px; margin-top: 5px;">
+          <span
+            style="font-size: 17px; font-family: montserat; margin-right: 10px; color: #FE551D">{{selectedOption}}</span>
+          <ion-icon [hidden]="!menuHidden" name="arrow-down"></ion-icon>
+          <ion-icon [hidden]="menuHidden" name="arrow-up"></ion-icon>
+          <br>
+          <div [hidden]="menuHidden" style="position: absolute; z-index: 6;">
+            <ion-item (click)="recentlyadded()" style="font-family: montserat;">Recently Added</ion-item>
+            <ion-item (click)="latestfirst()" lines="none" style="font-family: montserat;">Latest Trip First</ion-item>
+          </div>
+        </div>
+      </div>
+
+
+      <p *ngIf="showTripsText" style="margin: 20px; font-size: 16px; opacity: 0.7;" align="center">You havent added any
+        trips yet. Click on add trips to add one</p>
+
+      <ion-card (click)="showTripDetails(i)" *ngFor="let trip of trips;  let i = index;" padding
+        style="background-color: white; height: 350px;">
+        <img height="200px" style="object-fit: cover;" src="{{trip.photo}}">
+        <p style="font-weight: 600; margin: 0px; padding-top: 20px; font-size: 16px;">{{trip.eventTitle}}</p>
+
+        <div style="width: 100%; margin-top: 10px;">
+          <div style="width: 25px; float: left;">
+            <img height="25px" style="width: 30px;" src="../../assets/icon/pin.png">
+          </div>
+          <div style="float: left; padding-left: 5px; font-size: 15px; margin-top: 2px;">
+            {{trip.city}}, {{trip.province}}
+          </div>
+        </div><br>
+        <div style="width: 100%; margin-top: 12px;">
+          <div style="width: 25px; float: left;">
+            <img height="18px" style="width: 20px;" src="../../assets/icon/appointment-2.png">
+          </div>
+          <div style="float: left; padding-left: 5px; font-size: 14px; margin-top: 2px;">
+            {{trip.fromDate2}} - {{trip.toDate2}}
+          </div>
+        </div>
+      </ion-card>
+    </div>
+
+
+    <!-- Map Div -->
+    <div style="background-color: rgb(245, 245, 245);" [hidden]="!showMaps">
+      <div class="mapcover"></div>
+      <div id="map"></div>
+    </div>
+
+
+    <!-- Gallery Div -->
+    <div style="background-color: rgb(245, 245, 245);" [hidden]="!showGallery" style="width: 100%;">
+
+      <!-- <div class="filterdiv animated fadeInUp">
+    
+            </div> -->
+
+      <p *ngIf="showGalleryText" style="margin: 20px; font-size: 16px; opacity: 0.7;" align="center">You havent added
+        any trips yet. Click on add trips to add one</p>
+
+      <div (click)="openModal(i, 2)" *ngFor="let galleryimage of galleryimages; let i = index" class="eachgalleryimage">
+        <img style="width: 100%; height: 100%; object-fit: cover;" src="{{galleryimage}}">
+      </div>
+    </div>
+
+
+  </div>
+
+
+</ion-content>

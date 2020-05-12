@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons style="margin-left: 5px" slot="start">
+      <ion-back-button color="primary" defaultHref="/more"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      FAQs
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div (click)="expandItem(item)" style="width: 100vw;" *ngFor="let item of items">
+    <div style="width: 100vw;">
+      <ion-item style="width: 95vw;">
+        <ion-label>{{item.title}}</ion-label>
+        <ion-icon *ngIf="item.expanded == false" name="add"></ion-icon>
+        <ion-icon *ngIf="item.expanded == true" name="remove"></ion-icon>
+      </ion-item>
+    </div>
+
+
+    <div style="width: 100vw;">
+      <app-expandable expandHeight="170px" [expanded]="item.expanded">
+        <p style="margin: 15px; font-size: 18px;">
+          {{item.beforeicon}}<ion-icon style="font-size: 24px; padding-left: 10px; padding-right: 10px;"
+            name="{{item.icon}}"></ion-icon>{{item.aftericon}}
+        </p>
+      </app-expandable>
+    </div>
+  </div>
+
+  <ion-item-divider style="height: 30px;"></ion-item-divider>
+
+  <div style="width: 100vw; height: 150px; text-align: center;">
+    <div style="width: 100vw; height: 20px;"></div>
+
+    <div style="width: 100vw; display: inline-block;">
+      <span style="margin: 10px">Couldn't find what you're looking for?</span>
+
+      <div style="width: 100vw; height: 20px;"></div>
+
+      <ion-chip (click)="contactUs()" style="width: 180px; border: 1.5px solid #ffb152; background-color: rgb(250, 249, 249); height: 35px;">
+
+        <img src="../../assets/icon/orangemail.png" style="padding-left: 20px;">
+
+        <span style="color: #ffb152; padding-left: 10px; font-weight: 600;">Contact Us</span>
+      </ion-chip>
+
+    </div>
+
+  </div>
+</ion-content>

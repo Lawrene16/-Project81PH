@@ -1,0 +1,4 @@
+platform :ios, '7.0'
+target '#Project81PH' do
+	pod 'Flurry-iOS-SDK/FlurrySDK'
+end
