@@ -643,10 +643,24 @@
   dependencies:
     "@types/cordova" latest
 
+"@ionic-native/ionic-webview@^5.22.0-beta-1":
+  version "5.26.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/ionic-webview/-/ionic-webview-5.26.0.tgz#8494adeb81f0210907eb04dee257fde71f280c75"
+  integrity sha512-N9PlMaCq0SwHO3yNU3h1rr8JlFAaSA0S1PALVbOOz3YCbk8ABgmG4wBfyT5Sxdc+6hdgAr3/W2d8XG1sqQIjpA==
+  dependencies:
+    "@types/cordova" latest
+
 "@ionic-native/native-geocoder@^5.16.0":
   version "5.25.0"
   resolved "https://registry.yarnpkg.com/@ionic-native/native-geocoder/-/native-geocoder-5.25.0.tgz#fd9ceb681e7702ea99616cdd4a71086dbb1253d8"
   integrity sha512-CQr7eF4Nth+UUtnLmbsdN5so2IjN7QM88xvNnrvtxV00wRa+2G23WUxFZIRrn9RtCRe2pF08brwicEZj6iD35A==
+  dependencies:
+    "@types/cordova" latest
+
+"@ionic-native/sign-in-with-apple@^5.25.0":
+  version "5.26.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/sign-in-with-apple/-/sign-in-with-apple-5.26.0.tgz#96eb19355398ca5ff113f09435f387f18538f100"
+  integrity sha512-8H0ms/+yPXmf3MSwL1NSY84qmCq7B1RjAsWQnbJ86s8mCMxcGXBCkS2scsvK0ENMxpsFlneFwkrkKfRdpo+XfA==
   dependencies:
     "@types/cordova" latest
 
@@ -2535,7 +2549,7 @@ cordova-plugin-ionic-keyboard@^2.2.0:
   resolved "https://registry.yarnpkg.com/cordova-plugin-ionic-keyboard/-/cordova-plugin-ionic-keyboard-2.2.0.tgz#53ba9ccd5e765165446a094cfe042a2ddd87d81d"
   integrity sha512-yDUG+9ieKVRitq5mGlNxjaZh/MgEhFFIgTIPhqSbUaQ8UuZbawy5mhJAVClqY97q8/rcQtL6dCDa7x2sEtCLcA==
 
-cordova-plugin-ionic-webview@^4.1.3:
+cordova-plugin-ionic-webview@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-4.2.1.tgz#42a67bef248472659d421494feb8245ef27becfa"
   integrity sha512-7KrmqLaOGq1RP8N2z1ezN1kqkWFzTwwMvQ3/qAkd+exxFZuOe3DIN4eaU1gdNphsxdirI8Ajnr9q4So5vQbWqw==
@@ -2544,6 +2558,11 @@ cordova-plugin-nativegeocoder@3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/cordova-plugin-nativegeocoder/-/cordova-plugin-nativegeocoder-3.2.2.tgz#03e2796ada4197f8a2d41d78d7d2778fac707963"
   integrity sha512-3ZmfA01H6EYPsfUqv3DHPvWgn2yBVtqCbTe8CAMalT3qlFZBOUBdJemydSmgKNRhTgQvHSFc20jUJXiH67vt4w==
+
+cordova-plugin-sign-in-with-apple@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-sign-in-with-apple/-/cordova-plugin-sign-in-with-apple-0.1.1.tgz#9f4ace85ae5531c5f59cf0fb374cf1b973fbfbd8"
+  integrity sha512-D6kQ8R65L+ME9a9XaXfkzqzHHYIklLgdgJJKa8Ck8MUdSy2YUbNlSz8EVIrFy4rBtwY7AdDtLlakN5Pn45N2rA==
 
 cordova-plugin-splashscreen@^5.0.2:
   version "5.0.3"
@@ -8269,9 +8288,9 @@ websocket-driver@>=0.5.1:
     websocket-extensions ">=0.1.1"
 
 websocket-extensions@>=0.1.1:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
-  integrity sha512-nqHUnMXmBzT0w570r2JpJxfiSD1IzoI+HGVdd3aZ0yNi3ngvQ4jv1dtHt5VGxfI2yj5yqImPhOK4vmIh2xMbGg==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
+  integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
 
 whatwg-fetch@2.0.4:
   version "2.0.4"
