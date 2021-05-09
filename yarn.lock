@@ -643,10 +643,24 @@
   dependencies:
     "@types/cordova" latest
 
+"@ionic-native/ionic-webview@^5.22.0-beta-1":
+  version "5.32.1"
+  resolved "https://registry.yarnpkg.com/@ionic-native/ionic-webview/-/ionic-webview-5.32.1.tgz#749591b5bcde402443aa229c4a6ba82d40260375"
+  integrity sha512-CqZRxM0LDJgcGVB8o3K7s4c0lsVQAzhsVeP0QIFaIY6vIYYaZYkQaJAnZO7jzVgFZ3dQkPX20YhlqOxYYGuoTg==
+  dependencies:
+    "@types/cordova" latest
+
 "@ionic-native/native-geocoder@^5.16.0":
   version "5.25.0"
   resolved "https://registry.yarnpkg.com/@ionic-native/native-geocoder/-/native-geocoder-5.25.0.tgz#fd9ceb681e7702ea99616cdd4a71086dbb1253d8"
   integrity sha512-CQr7eF4Nth+UUtnLmbsdN5so2IjN7QM88xvNnrvtxV00wRa+2G23WUxFZIRrn9RtCRe2pF08brwicEZj6iD35A==
+  dependencies:
+    "@types/cordova" latest
+
+"@ionic-native/sign-in-with-apple@^5.25.0":
+  version "5.32.1"
+  resolved "https://registry.yarnpkg.com/@ionic-native/sign-in-with-apple/-/sign-in-with-apple-5.32.1.tgz#ae1b3091aa7936d0ad93843ec69ee5aea39f6642"
+  integrity sha512-RXjbhodze3kLmMA1k+aiPRRLkah+g7PxtXOUtHd2W7+uvHRpesr9+EHbdC5biTqt5Lj26YbRbsMdbNTgvaAxQQ==
   dependencies:
     "@types/cordova" latest
 
@@ -2535,7 +2549,7 @@ cordova-plugin-ionic-keyboard@^2.2.0:
   resolved "https://registry.yarnpkg.com/cordova-plugin-ionic-keyboard/-/cordova-plugin-ionic-keyboard-2.2.0.tgz#53ba9ccd5e765165446a094cfe042a2ddd87d81d"
   integrity sha512-yDUG+9ieKVRitq5mGlNxjaZh/MgEhFFIgTIPhqSbUaQ8UuZbawy5mhJAVClqY97q8/rcQtL6dCDa7x2sEtCLcA==
 
-cordova-plugin-ionic-webview@^4.1.3:
+cordova-plugin-ionic-webview@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-4.2.1.tgz#42a67bef248472659d421494feb8245ef27becfa"
   integrity sha512-7KrmqLaOGq1RP8N2z1ezN1kqkWFzTwwMvQ3/qAkd+exxFZuOe3DIN4eaU1gdNphsxdirI8Ajnr9q4So5vQbWqw==
@@ -2544,6 +2558,11 @@ cordova-plugin-nativegeocoder@3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/cordova-plugin-nativegeocoder/-/cordova-plugin-nativegeocoder-3.2.2.tgz#03e2796ada4197f8a2d41d78d7d2778fac707963"
   integrity sha512-3ZmfA01H6EYPsfUqv3DHPvWgn2yBVtqCbTe8CAMalT3qlFZBOUBdJemydSmgKNRhTgQvHSFc20jUJXiH67vt4w==
+
+cordova-plugin-sign-in-with-apple@^0.1.1:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-sign-in-with-apple/-/cordova-plugin-sign-in-with-apple-0.1.2.tgz#663322936c7d6b3cf440beb808ee2939da134770"
+  integrity sha512-SOVa2fwqT5aRGCclgjQIZAA0RsylX9vWtVwNK9sx6kTV65FjZ2CcOygyY//EIo9YNSGzHR+OExhu9EDagyZIpg==
 
 cordova-plugin-splashscreen@^5.0.2:
   version "5.0.3"
@@ -6409,9 +6428,9 @@ querystring@0.2.0:
   integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
 
 querystringify@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
-  integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
+  integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
@@ -7981,9 +8000,9 @@ urix@^0.1.0:
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
 url-parse@^1.4.3:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
-  integrity sha512-d3uaVyzDB9tQoSXFvuSUNFibTd9zxd2bkVrDRvF5TmvWWQwqE4lgYJ5m+x1DbecWkw+LK4RNl2CU1hHuOKPVlg==
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.1.tgz#d5fa9890af8a5e1f274a2c98376510f6425f6e3b"
+  integrity sha512-HOfCOUJt7iSYzEx/UqgtwKRMC6EU91NFhsCHMv9oM03VJcVo2Qrp8T8kI9D7amFf1cu+/3CEhgb3rF9zL7k85Q==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
